@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-config
+  labels:
+    tier: data
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+data:
+  DB_HOST: "dev-mysql-db.c36q446yilvm.us-west-1.rds.amazonaws.com"
+  DB_USER: "admin"
+  DB_NAME: "webappdb"
